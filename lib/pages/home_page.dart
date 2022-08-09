@@ -18,39 +18,50 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: black,
       appBar: AppBar(
-        elevation: 0,
-        backgroundColor: grey.withOpacity(0.2),
+        elevation: 0,      
+        backgroundColor: black.withOpacity(0.2),
         title: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            Icon(Icons.menu,color: blue),
+          crossAxisAlignment: CrossAxisAlignment.center,                                              
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,    
+          children: <Widget>[   
+            Container(
+              width: 40,
+              height: 40,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  image: DecorationImage(
+                      image: NetworkImage(
+                          "https://yt3.ggpht.com/ytc/AMLnZu94ON3OFLpRg0WSf207MIsGzOIpBLskIT-pWs_2BQ=s176-c-k-c0x00ffffff-no-rj-mo"),
+                      fit: BoxFit.cover)),
+            ),
             Container(
               child: Padding(
                 padding: const EdgeInsets.only(right: 280, left: 10),
                 child: Text(
                   "Chats",
                   style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
                 ),
               ),
             ),
-            Icon(Icons.camera_alt,color: blue),
-            Icon(Icons.edit,color: blue)
+            Icon(Icons.camera_alt,color: white),
+            Icon(Icons.edit,color: white)
           ],
         ),
       ), 
       bottomNavigationBar: Container(
         height: 80,
         child: BottomNavigationBar(
-          elevation: 0,
-          backgroundColor: white.withOpacity(0.2),
+          unselectedItemColor: white.withOpacity(0.6),
+          elevation: 0,          
+          backgroundColor: black.withOpacity(0.2),
           items: [
             BottomNavigationBarItem(
-              icon: Icon(Icons.messenger),
+              icon: Icon(Icons.messenger, color: blue_story,),
               label: 'Chats',
             ),
             BottomNavigationBarItem(
@@ -75,27 +86,28 @@ class _HomePageState extends State<HomePage> {
       padding: EdgeInsets.only(left: 20, right: 20),
       children: <Widget>[
         SizedBox(
-          height: 20,
+          height: 10,
         ),
         Container(
           width: double.infinity,
           height: 40,
           decoration: BoxDecoration(
-              color: grey, borderRadius: BorderRadius.circular(15)),
+              color: grey.withOpacity(0.1), borderRadius: BorderRadius.circular(15)),
           child: TextField(
-            cursorColor: black,
+            cursorColor: white.withOpacity(0.4),
             controller: _searchController,
             decoration: InputDecoration(
                 prefixIcon: Icon(
                   Icons.search,
-                  color: black.withOpacity(0.5),
+                  color: white.withOpacity(0.6),
                 ),
                 hintText: "Search",
+                hintStyle: TextStyle(color: white.withOpacity(0.6)),
                 border: InputBorder.none),
           ),
         ),
         SizedBox(
-          height: 30,
+          height: 20,
         ),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
@@ -109,10 +121,11 @@ class _HomePageState extends State<HomePage> {
                       width: 70,
                       height: 70,
                       decoration:
-                          BoxDecoration(shape: BoxShape.circle, color: grey),
+                          BoxDecoration(shape: BoxShape.circle, color:  black.withOpacity(0.2)),
                       child: Center(
                         child: Icon(
                           Icons.video_call,
+                          color:  white.withOpacity(0.8),
                           size: 33,
                         ),
                       ),
@@ -125,6 +138,8 @@ class _HomePageState extends State<HomePage> {
                       child: Align(
                           child: Text(
                         'Mulai Menelpon',
+                        style: TextStyle(
+                              color: white),
                         overflow: TextOverflow.ellipsis,
                       )),
                     )
@@ -198,6 +213,8 @@ class _HomePageState extends State<HomePage> {
                         child: Align(
                             child: Text(
                           userStories[index]['name'],
+                          style: TextStyle(
+                              color: white),
                           overflow: TextOverflow.ellipsis,
                         )),
                       )
@@ -284,7 +301,8 @@ class _HomePageState extends State<HomePage> {
                         Text(
                           userMessages[index]['name'],
                           style: TextStyle(
-                              fontSize: 17, fontWeight: FontWeight.w500),
+                              fontSize: 17, fontWeight: FontWeight.w500,
+                              color: white),                              
                         ),
                         SizedBox(
                           height: 5,
@@ -296,8 +314,8 @@ class _HomePageState extends State<HomePage> {
                                 " - " +
                                 userMessages[index]['created_at'],
                             style: TextStyle(
-                                fontSize: 15, color: black.withOpacity(0.8)),
-                            overflow: TextOverflow.ellipsis,
+                                fontSize: 15, color: white.withOpacity(0.6)),
+                                overflow: TextOverflow.ellipsis,
                           ),
                         )
                       ],
