@@ -122,31 +122,31 @@ List messages = [
       {
         "isMe" : true,
         "messageType" : 1,
-        "message" : "Som muk",
+        "message" : "Okay",
         "profileImg" : "https://yt3.ggpht.com/ytc/AMLnZu94ON3OFLpRg0WSf207MIsGzOIpBLskIT-pWs_2BQ=s176-c-k-c0x00ffffff-no-rj-mo"
       },
       {
         "isMe" : true,
         "messageType" : 3,
-        "message" : "Ory Reang",
+        "message" : "pleased to meet you",
         "profileImg" : "https://yt3.ggpht.com/ytc/AMLnZu94ON3OFLpRg0WSf207MIsGzOIpBLskIT-pWs_2BQ=s176-c-k-c0x00ffffff-no-rj-mo"
       },
       {
         "isMe" : false,
         "messageType" : 1,
-        "message" : "Eng use ah laptop nus ubuntu",
+        "message" : "Thank You",
         "profileImg" : "https://yt3.ggpht.com/ytc/AMLnZu94ON3OFLpRg0WSf207MIsGzOIpBLskIT-pWs_2BQ=s176-c-k-c0x00ffffff-no-rj-mo"
       },
       {
         "isMe" : false,
         "messageType" : 2,
-        "message" : "code teat ban jenh",
+        "message" : "Nice To meet You too",
         "profileImg" : "https://yt3.ggpht.com/ytc/AMLnZu94ON3OFLpRg0WSf207MIsGzOIpBLskIT-pWs_2BQ=s176-c-k-c0x00ffffff-no-rj-mo"
       },
       {
         "isMe" : false,
         "messageType" : 3,
-        "message" : "use laptop neng lerk na kor code",
+        "message" : "let's be friends",
         "profileImg" : "https://yt3.ggpht.com/ytc/AMLnZu94ON3OFLpRg0WSf207MIsGzOIpBLskIT-pWs_2BQ=s176-c-k-c0x00ffffff-no-rj-mo"
       },
       {

@@ -228,18 +228,18 @@ class _HomePageState extends State<HomePage> {
         SizedBox(
           height: 30,
         ),
-        Column(
-          children: List.generate(userMessages.length, (index) {
+        Column(          
+          children: List.generate(userMessages.length, (index) {            
             return InkWell(
               onTap: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (_) => ChatDetailPage()));
               },
               child: Padding(
-                padding: const EdgeInsets.only(bottom: 5,top: 5),
+                padding: const EdgeInsets.only(bottom: 10,top: 10),
                 child: Row(                  
                   children: <Widget>[
-                    Container(
+                    Container(                      
                       width: 75,
                       height: 75,
                       child: Stack(

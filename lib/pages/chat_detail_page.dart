@@ -13,8 +13,9 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: black,
       appBar: AppBar(
-        backgroundColor: grey.withOpacity(0.2),
+        backgroundColor: black.withOpacity(0.2),
         elevation: 0,
         leading: InkWell(
             onTap: () {
@@ -22,7 +23,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
             },
             child: Icon(
               Icons.arrow_back_ios,
-              color: blue,
+              color: Color(0xB0FF1DD2),
             )),
         title: Row(
           children: <Widget>[
@@ -45,14 +46,14 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                 Text(
                   "Fubuki",
                   style: TextStyle(
-                      fontSize: 18, fontWeight: FontWeight.bold, color: black),
+                      fontSize: 18, fontWeight: FontWeight.bold, color: white),
                 ),
                 SizedBox(
                   height: 3,
                 ),
                 Text(
                   "Active now",
-                  style: TextStyle(color: black.withOpacity(0.4), fontSize: 14),
+                  style: TextStyle(color: white.withOpacity(0.4), fontSize: 14),
                 )
               ],
             )
@@ -60,8 +61,8 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
         ),
         actions: <Widget>[
           Icon(
-            LineIcons.phone,
-            color: blue,
+            Icons.phone,
+            color: Color(0xB0FF1DD2),
             size: 30,
           ),
           SizedBox(
@@ -69,15 +70,26 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
           ),
           Icon(
             Icons.videocam,
-            color: blue,
+            color: Color(0xB0FF1DD2),
             size: 35,
           ),
           SizedBox(
-            width: 8,
+            width: 10,
+          ),
+          Container(
+            width: 12,
+            height: 12,
+            decoration: BoxDecoration(
+                color: online,
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.white38)),
+          ),
+          SizedBox(
+            width: 10,
           ),
           Icon(
             Icons.info,
-            color: blue,
+            color: Color(0xB0FF1DD2),
             size: 30,
           ),
           SizedBox(
@@ -94,17 +106,17 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
       height: 80,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: grey.withOpacity(0.2)
+        color: black,
       ),
       child: Padding(
-        padding: const EdgeInsets.only(left: 20,right: 20,bottom: 10),
+        padding: const EdgeInsets.only(left: 30,right: 10,bottom: 10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
               width: (MediaQuery.of(context).size.width - 40)/2,
               child: Row(
-                children: <Widget>[
+                children: <Widget>[                  
               Icon(Icons.add_circle,size: 35,color: blue,),
               SizedBox(width: 15,),
               Icon(Icons.camera_alt,size: 35,color: blue,),
@@ -123,17 +135,18 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
                   width: (MediaQuery.of(context).size.width-140)/2,
                   height: 40,
                   decoration: BoxDecoration(
-                    color: grey,
+                    color: white.withOpacity(0.2),
                     borderRadius: BorderRadius.circular(20)
                   ),
                   child: Padding(
                     padding: const EdgeInsets.only(left: 12),
                     child: TextField(
-                      cursorColor: black,
+                      cursorColor: white.withOpacity(0.4),
                       controller: _sendMessageController,
                       decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: "Aa",
+                        hintStyle: TextStyle(color: white.withOpacity(0.6)),
                         suffixIcon: Icon(Icons.face,color: blue,size: 35,)
                       ),
                     ),
@@ -221,7 +234,7 @@ class ChatBubble extends StatelessWidget {
             Flexible(
                           child: Container(
                 decoration: BoxDecoration(
-                  color: grey,
+                  color:  white.withOpacity(0.1),
                   borderRadius: getMessageType(messageType) 
                 ),
                 child: Padding(
@@ -229,7 +242,7 @@ class ChatBubble extends StatelessWidget {
                   child: Text(
                     message,
                     style: TextStyle(
-                      color: black,
+                      color: white,
                       fontSize: 17
                     ),
                   ),
