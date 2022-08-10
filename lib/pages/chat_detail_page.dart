@@ -15,6 +15,7 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
     return Scaffold(
       backgroundColor: black,
       appBar: AppBar(
+        toolbarHeight: 80,
         backgroundColor: black.withOpacity(0.2),
         elevation: 0,
         leading: InkWell(
@@ -24,10 +25,10 @@ class _ChatDetailPageState extends State<ChatDetailPage> {
             child: Icon(
               Icons.arrow_back_ios,
               color: Color(0xB0FF1DD2),
-            )),
+            )),            
         title: Row(
           children: <Widget>[
-            Container(
+            Container(              
               width: 40,
               height: 40,
               decoration: BoxDecoration(
@@ -187,7 +188,7 @@ class ChatBubble extends StatelessWidget {
   Widget build(BuildContext context) {
     if(isMe){
       return Padding(
-        padding: const EdgeInsets.all(1.0),
+        padding: const EdgeInsets.all(2.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.end,
           children: <Widget>[
@@ -214,7 +215,7 @@ class ChatBubble extends StatelessWidget {
       );
     }else{
       return Padding(
-        padding:  EdgeInsets.all(1.0),
+        padding:  EdgeInsets.all(2.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

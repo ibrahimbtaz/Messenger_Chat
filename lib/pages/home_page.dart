@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:messenger_chat/constant/data.dart';
 import 'package:messenger_chat/pages/chat_detail_page.dart';
 import 'package:messenger_chat/theme/colors.dart';
@@ -20,12 +18,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: black,
       appBar: AppBar(
+        toolbarHeight: 70,
         elevation: 0,      
         backgroundColor: black.withOpacity(0.2),
         title: Row(
           crossAxisAlignment: CrossAxisAlignment.center,                                              
           mainAxisAlignment: MainAxisAlignment.spaceBetween,    
-          children: <Widget>[   
+          children: <Widget>[  
             Container(
               width: 40,
               height: 40,
@@ -38,7 +37,7 @@ class _HomePageState extends State<HomePage> {
             ),
             Container(
               child: Padding(
-                padding: const EdgeInsets.only(right: 280, left: 10),
+                padding: const EdgeInsets.only(right: 240),
                 child: Text(
                   "Chats",
                   style: TextStyle(
